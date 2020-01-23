@@ -112,3 +112,39 @@ Route::get('tni/{nama}/{bb}/{umur}',function($a, $b, $c){
     }
 });
 
+//akses model post
+Route::get('testmodel',function(){
+    $query = App\Post::all();
+    return $query;
+});
+
+Route::get('testmodel/1',function(){
+    $query = App\Post::find(1);
+    return $query;
+});
+
+Route::get('testmodel/2',function(){
+    $query = App\Post::where('title','like','%cepat nikah%')->get();
+    return $query;
+});
+
+Route::get('testmodel/3',function(){
+    $query = App\Post::find(1);
+    $query->title = "Ciri Keluarga Sakinah";
+    $query->save();
+    return $query;
+});
+
+Route::get('testmodel/4',function(){
+    $query = App\Post::find(1);
+    $query->delete();
+});
+
+Route::get('testmodel/5',function(){
+    $query = new App\Post;
+    $query->title = "7 Amalan Pembuka Jodoh";
+    $query->content = "shalat malam, sedekah, puasa sunah, silaturahmi, senyum, doa, tobat";
+    $query->save();
+    return $query;
+});
+
