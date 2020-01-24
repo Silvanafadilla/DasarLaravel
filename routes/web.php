@@ -147,4 +147,10 @@ Route::get('testmodel/5',function(){
     $query->save();
     return $query;
 });
+Route::get('model/{param}',function($a){
+    $data = App\Data::find(1);
+    $data->nama = $a;
+    $data->save();
+    return $data;
+});
 
