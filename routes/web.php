@@ -154,3 +154,14 @@ Route::get('model/{param}',function($a){
     return $data;
 });
 
+Route::get('/',function(){
+    return view('welcome');
+});
+
+Route::get('latihan','LatihanController@halo');
+Route::get('tambah/{a?}/{b?}','LatihanController@pertambahan');
+Route::get('kurang/{a?}/{b?}','LatihanController@perkurangan');
+Route::get('bagi/{a?}{b?}','LatihanController@pembagian');
+Route::get('kali/{a?}/{b?}','LatihanController@perkalian');
+Route::get('l1','LatihanController@loop');
+Route::get('l2','LatihanController@latihan');
