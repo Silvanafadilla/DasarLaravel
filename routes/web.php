@@ -165,3 +165,17 @@ Route::get('bagi/{a?}{b?}','LatihanController@pembagian');
 Route::get('kali/{a?}/{b?}','LatihanController@perkalian');
 Route::get('l1','LatihanController@loop');
 Route::get('l2','LatihanController@latihan');
+Route::get('l3','LatihanController@latihan2');
+
+//CRUD TABUNGAN
+Route::get('tabungan','TabunganController@index');
+Route::get('show/{id}','TabunganController@show');
+Route::get('tabungan-tambah/{nis}/{nama}/{kelas}/{jml}','TabunganController@store');
+Route::get('update/{id}/{nis}/{nama}/{kelas}/{jml}','TabunganController@update');
+Route::get('delete/{id}','TabunganController@delete');
+
+Route::get('customer','CustomerController@index');
+Route::get('show/{id}','CustomerController@show');
+Route::get('tabungan-tambah/{cc}/{nama}/{email}/{city}/{country}/{address}/{contact}','CustomerController@store');
+Route::get('update/{cc}/{nama}/{email}/{city}/{country}/{address}/{contact}','CustomerController@update');
+Route::get('delete/{id}','CustomerController@delete');
