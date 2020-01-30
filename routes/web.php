@@ -179,3 +179,8 @@ Route::get('show/{id}','CustomerController@show');
 Route::get('tabungan-tambah/{cc}/{nama}/{email}/{city}/{country}/{address}/{contact}','CustomerController@store');
 Route::get('update/{cc}/{nama}/{email}/{city}/{country}/{address}/{contact}','CustomerController@update');
 Route::get('delete/{id}','CustomerController@delete');
+
+//PASSING DATA
+Route::get('pass','PracticeController@pass');
+Route::get('pass1','PracticeController@pass1');
+Route::get('pass2','PracticeController@pass2');
