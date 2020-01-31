@@ -184,3 +184,6 @@ Route::get('delete/{id}','CustomerController@delete');
 Route::get('pass','PracticeController@pass');
 Route::get('pass1','PracticeController@pass1');
 Route::get('pass2','PracticeController@pass2');
+Route::get('pass3/{id}','PracticeController@pass3');
+Route::get('index','KaosController@index');
+Route::get('index/{id}','KaosController@index1');
